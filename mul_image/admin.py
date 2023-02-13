@@ -1,6 +1,9 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import MultipleImage
 
-admin.site.register(MultipleImage)
+# admin.site.register(MultipleImage)
+
+class imageAdmin(admin.ModelAdmin):
+    list_display = ["id","image_tag", "images"] # new
+
+admin.site.register(MultipleImage, imageAdmin)

@@ -9,3 +9,9 @@ def upload(request):
             MultipleImage.objects.create(images=image)
     images = MultipleImage.objects.all()
     return render(request, 'index.html', {'images': images})
+
+
+
+
+
+    
